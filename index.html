@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L2ESSENCE</title>
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      background: #1d1a25;
+    }
+
+    .box {
+      width: 1325px;
+      margin: 0 auto;
+    }
+
+    .nav {
+      margin-top: 2px;
+    }
+
+    .nav-items-left {
+      display: flex;
+    }
+
+    .nav-items-right {
+      display: flex;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0px;
+    }
+
+    .nav-item-link:hover {
+      color: #fff;
+    }
+
+    .nav-item-link {
+      font-family: Arial;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 15px 30px;
+      color: #aeacb2;
+      text-decoration: none;
+      transition: all, .25s;
+    }
+
+    .button-wrap:hover {
+      filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.25));
+    }
+
+    .button-wrap {
+      transition: all, .25s;
+    }
+    
+    .button:hover {
+      background-size: 100%;
+      background-position: 100%;
+      box-shadow: inset 0 0 13px rgb(255 255 255 / 25%);
+    }
+
+    .button {
+      --notchSize: 10px;
+      display: block;
+      font-family: Arial;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 15px 30px;
+      background-position:100px;
+      background: linear-gradient(90deg, #363440, #61626d);
+      background-size: 200%;
+      background-position: 0%;
+      clip-path: polygon(0% var(--notchSize), var(--notchSize) 0%, calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)));
+      color: #d0cfd1;
+      text-decoration: none;
+      transition: all, .25s;
+    }
+
+    .button-enter-personal-account {
+      margin-right: 20px;
+    }
+  </style>
+
+  <div class="nav">
+    <div class="box">
+      <div class="nav-items">
+        <div class="nav-items-left">
+          <a href="#" class="nav-item-link">Главная страница</a>
+          <a href="#" class="nav-item-link">Скачать файлы</a>
+          <a href="#" class="nav-item-link">Создать аккаунт</a>
+          <a href="#" class="nav-item-link">Описание сервера</a>
+          <a href="#" class="nav-item-link">Форум</a>
+        </div>
+        <div class="nav-items-right">
+          <div class="button-wrap">
+            <a href="#" class="button button-enter-personal-account">Войти в кабинет</a>
+          </div>
+          <div class="button-wrap">
+            <a href="#" class="button">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
