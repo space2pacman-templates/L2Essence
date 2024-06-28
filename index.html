@@ -13,7 +13,7 @@
     }
 
     .box {
-      width: 1325px;
+      width: 1300px;
       margin: 0 auto;
     }
 
@@ -27,6 +27,7 @@
 
     .nav-items-right {
       display: flex;
+      grid-gap: 20px;
     }
 
     .nav-items {
@@ -43,7 +44,8 @@
       font-family: Arial;
       text-transform: uppercase;
       font-weight: bold;
-      padding: 15px 30px;
+      padding: 15px 15px;
+      margin-right: 22px;
       color: #aeacb2;
       text-decoration: none;
       transition: all, .25s;
@@ -80,8 +82,150 @@
       transition: all, .25s;
     }
 
-    .button-enter-personal-account {
-      margin-right: 20px;
+    .main {
+      background: #6f6f6f;
+      border-top: 3px solid #2e2d38;
+      border-bottom: 3px solid #2e2d38;
+      padding-top: 465px;
+      padding-bottom: 85px;
+    }
+
+    .main-status-servers {
+      display: flex;
+      grid-gap: 20px;
+    }
+
+    .main-server-status {
+      width: 310px;
+      background: #272631;
+      padding: 15px 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 6px;
+    }
+
+    .main-server-status-icon {
+      width: 50px;
+      height: 50px;
+      background: #0f0;
+    }
+
+    .main-server-status-info {
+      margin-left: 15px;
+      flex: 1;
+    }
+
+    .main-server-status-info-up {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .main-server-status-info-name {
+      color: #fff;
+      font-family: Arial;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .main-server-status-info-text {
+      font-family: Arial;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #6c6f78;
+    }
+
+    .main-server-status-info-status-bar {
+      background: #363440;
+      width: 100%;
+      height: 10px;
+      margin-top: 18px;
+      border-radius: 6px;
+    }
+
+    .main-server-status-info-status-bar--active {
+      background: #6c6f78;
+    }
+
+    .main-blocks {
+      display: flex;
+      grid-gap: 20px;
+    }
+
+    .main-block {
+      margin-top: 33px;
+      border-radius: 6px;
+      overflow: hidden;
+      width: 50%;
+    }
+
+    .main-block-header {
+      background: #272631;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 20px 20px;
+    }
+
+    .main-block-header-caption {
+      color: #fff;
+      font-family: Arial;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .main-block-header-nav {
+      display: flex;
+      grid-gap: 20px;
+    }
+
+    .main-block-content-news {
+      padding: 60px 20px;
+      background: #dcdcdc;
+    }
+
+    .main-block-content-header {
+      font-family: Arial;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .main-block-content-desc {
+      font-family: Arial;
+      color: #787981;
+      margin-top: 15px;
+    }
+
+    .main-block-content-read-more {
+      margin-top: 60px;
+      display: flex;
+      justify-content: end;
+    }
+
+    .main-block-content-forum {
+      background: #22202b;
+      padding: 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial;
+      font-size: 18px;
+      color: #787981;
+      border-bottom: 1px solid #2e2d38;
+      text-decoration: none;
+    }
+
+    .main-block-content-forum:hover {
+      background: #272631;
+      color: #d0cfd1;
+    }
+
+    .main-block-content-forum-date {
+      font-size: 12px;
     }
   </style>
 
@@ -97,10 +241,99 @@
         </div>
         <div class="nav-items-right">
           <div class="button-wrap">
-            <a href="#" class="button button-enter-personal-account">Войти в кабинет</a>
+            <a href="#" class="button">Войти в кабинет</a>
           </div>
           <div class="button-wrap">
             <a href="#" class="button">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="box">
+      <div class="main-status-servers">
+        <div class="main-server-status">
+          <div class="main-server-status-icon"></div>
+          <div class="main-server-status-info">
+            <div class="main-server-status-info-up">
+              <div class="main-server-status-info-name">Cadmus</div>
+              <div class="main-server-status-info-text">21.08.24</div>
+            </div>
+            <div class="main-server-status-info-down">
+              <div class="main-server-status-info-status-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="main-server-status">
+          <div class="main-server-status-icon"></div>
+          <div class="main-server-status-info">
+            <div class="main-server-status-info-up">
+              <div class="main-server-status-info-name">Aria</div>
+              <div class="main-server-status-info-text">100%</div>
+            </div>
+            <div class="main-server-status-info-down">
+              <div class="main-server-status-info-status-bar main-server-status-info-status-bar--active"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-blocks">
+        <div class="main-block">
+          <div class="main-block-header">
+            <div class="main-block-header-caption">Новости проекта</div>
+            <div class="main-block-header-nav">
+              <div class="button-wrap">
+                <a href="#" class="button">-</a>
+              </div>
+              <div class="button-wrap">
+                <a href="#" class="button">-</a>
+              </div>
+            </div>
+          </div>
+          <div class="main-block-content main-block-content-news">
+            <div class="main-block-content-header">Lineage 2</div>
+            <div class="main-block-content-desc">
+              Lineage II - компьютерная игра в жанре MMORPG для ОС Windows,
+              изданная компанией NCSOFT. Первый в мире релиз игры состоялся 1 октября 2003 года в Южной Корее.
+              Игра является приквелом, действие в котором происходит за 150 лет до событий первой части Lineage.
+              Игра выполнена в жанре фэнтези.
+            </div>
+            <div class="button-wrap main-block-content-read-more">
+              <a href="#" class="button">Читать подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-block">
+          <div class="main-block-header">
+            <div class="main-block-header-caption">Темы с форума</div>
+            <div class="main-block-header-nav">
+              <div class="button-wrap">
+                <a href="#" class="button">Перейти на форум</a>
+              </div>
+            </div>
+          </div>
+          <div class="main-block-content">
+            <a href="#" class="main-block-content-forum">
+              <div class="main-block-content-forum-caption">Кто кем стартует, опрос от администрации</div>
+              <div class="main-block-content-forum-date">21.08.2023</div>
+            </a>
+            <a href="#"  class="main-block-content-forum">
+              <div class="main-block-content-forum-caption">Информация о сервере CADMUS x5 на обновленном...</div>
+              <div class="main-block-content-forum-date">21.08.2023</div>
+            </a>
+            <a href="#"  class="main-block-content-forum">
+              <div class="main-block-content-forum-caption">Бонусы переходящим кланам</div>
+              <div class="main-block-content-forum-date">21.08.2023</div>
+            </a>
+            <a href="#"  class="main-block-content-forum">
+              <div class="main-block-content-forum-caption">Денежная акция для всех игроков сервера</div>
+              <div class="main-block-content-forum-date">21.08.2023</div>
+            </a>
+            <a href="#"  class="main-block-content-forum">
+              <div class="main-block-content-forum-caption">Подпишись на наш телеграм канал и получи промо...</div>
+              <div class="main-block-content-forum-date">21.08.2023</div>
+            </a>
           </div>
         </div>
       </div>
