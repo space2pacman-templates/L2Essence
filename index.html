@@ -19,6 +19,7 @@
 
     .nav {
       margin-top: 2px;
+      border-bottom: 3px solid #2e2d38;
     }
 
     .nav-items-left {
@@ -83,8 +84,8 @@
     }
 
     .main {
-      background: #6f6f6f;
-      border-top: 3px solid #2e2d38;
+      background: linear-gradient(rgb(0 0 0 / 40%), rgba(0, 0, 0, 0.8)), url(./images/main.png);
+      background-size: cover;
       border-bottom: 3px solid #2e2d38;
       padding-top: 465px;
       padding-bottom: 85px;
@@ -193,7 +194,8 @@
 
     .main-block-content-news {
       padding: 60px 20px;
-      background: #dcdcdc;
+      background: linear-gradient(rgb(0 0 0 / 40%), rgba(0, 0, 0, 0.4)), url(./images/news.jpg);
+      background-size: cover;
     }
 
     .main-block-content-header {
@@ -235,6 +237,168 @@
 
     .main-block-content-forum-date {
       font-size: 12px;
+    }
+
+    .articles {
+      background: linear-gradient(rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(./images/articles.jpg);
+      background-size: cover;
+      padding-top: 90px;
+      padding-bottom: 90px;
+      border-bottom: 3px solid #2e2d38;
+    }
+
+    .articles-main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .articles-main-image {
+      width: 620px;
+      height: 418px;
+      background: linear-gradient(rgb(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/articles.jpg);
+      background-size: cover;
+      --notchSize: 10px;
+      clip-path: polygon(0% var(--notchSize), var(--notchSize) 0%, calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% calc(100% - var(--notchSize)), calc(100% - var(--notchSize)) 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)));
+    }
+
+    .articles-main-desc {
+      flex: 1;
+      padding-top: 120px;
+      padding-left: 55px;
+    }
+
+    .articles-main-desc-header {
+      color: #aeacb2;
+      font-family: Arial;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .articles-main-desc-text {
+      color: #aeacb2;
+      font-family: Arial;
+      margin-top: 8px;
+    }
+
+    .articles-main-button-read-more {
+      margin-top: 30px;
+      display: flex;
+      justify-content: start;
+    }
+
+    .articles-buttons {
+      display: flex;
+      grid-gap: 20px;
+      margin-top: 95px;
+    }
+
+    .articles-button {
+      display: block;
+      font-family: Arial;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 32px 30px;
+      background-position: 100px;
+      background: linear-gradient(90deg, #363440, #61626d);
+      background-size: 200%;
+      background-position: 0%;
+      color: #d0cfd1;
+      text-decoration: none;
+      transition: all, .25s;
+      width: 100%;
+      text-align: center;
+    }
+
+    .articles-button:hover {
+      background-size: 100%;
+      background-position: 100%;
+      box-shadow: inset 0 0 13px rgb(255 255 255 / 25%);
+      filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.25));
+    }
+
+    .streams {
+      padding-top: 75px;
+      padding-bottom: 75px;
+      background-color: #121119;
+      border-bottom: 3px solid #2e2d38;
+    }
+
+    .streams-blocks {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      list-style: none;
+    }
+
+    .streams-block {
+      height: 280px;
+      background: #1d1a25;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .streams-block-desc {
+      color: #6c6f78;
+      font-family: Arial;
+      margin-bottom: 12px;
+    }
+
+    .streams-block-link {
+      font-family: Arial;
+      color: #918e92;
+      border-bottom: 1px solid;
+      text-decoration: none;
+    }
+
+    .footer {
+      padding-top: 80px;
+      background: #1d1a25
+    }
+
+    .footer-blocks {
+      display: flex;
+    }
+
+    .footer-block {
+      width: 100%;
+    }
+
+    .footer-block-header {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 24px;
+      color: #aeacb2;
+    }
+
+    .footer-block-desc {
+      font-family: Arial;
+      color: #aeacb2;
+      padding-right: 100px;
+      margin-top: 25px;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .footer-block-socials {
+      margin-top: 30px;
+      display: flex;
+      grid-gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 10px;
+      padding-top: 20px;
+    }
+
+    .footer-link {
+      font-family: Arial;
+      color: #aeacb2;
+      text-decoration: none;
     }
   </style>
 
@@ -347,6 +511,116 @@
               <div class="main-block-content-forum-caption">Подпишись на наш телеграм канал и получи промо...</div>
               <div class="main-block-content-forum-date">21.08.2023</div>
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="articles">
+    <div class="box">
+      <div class="articles-main">
+        <div class="articles-main-image"></div>
+        <div class="articles-main-desc">
+          <div class="articles-main-desc-header">Превосходное снаряжение</div>
+          <div class="articles-main-desc-text">
+            Ранг экипировки R110 перестал быть максимальным в игре. К новому рангу L относятся 14 видов оружия Триединства и доспехи Превосходства трех видов: магические, легкие и тяжелые.
+          </div>
+          <div class="button-wrap articles-main-button-read-more">
+            <a href="#" class="button">Читать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="articles-buttons">
+        <a href="#" class="articles-button">Превосходное снаряжение</a>
+        <a href="#" class="articles-button">Маленькие помощники</a>
+        <a href="#" class="articles-button">Исследуй новые земли</a>
+      </div>
+    </div>
+  </div>
+  <div class="streams">
+    <div class="box">
+      <div class="streams-blocks">
+        <div class="streams-block">
+          <div class="streams-block-desc">Хотите разместить свой стрим?</div>
+          <a href="#" class="streams-block-link">
+            Разместить стрим
+            <img class="main-block-header-nav-arrow" src="images/arrow-right.svg">
+          </a>
+        </div>
+        <div class="streams-block">
+          <div class="streams-block-desc">Хотите разместить свой стрим?</div>
+          <a href="#" class="streams-block-link">
+            Разместить стрим
+            <img class="main-block-header-nav-arrow" src="images/arrow-right.svg">
+          </a>
+        </div>
+        <div class="streams-block">
+          <div class="streams-block-desc">Хотите разместить свой стрим?</div>
+          <a href="#" class="streams-block-link">
+            Разместить стрим
+            <img class="main-block-header-nav-arrow" src="images/arrow-right.svg">
+          </a>
+        </div>
+        <div class="streams-block">
+          <div class="streams-block-desc">Хотите разместить свой стрим?</div>
+          <a href="#" class="streams-block-link">
+            Разместить стрим
+            <img class="main-block-header-nav-arrow" src="images/arrow-right.svg">
+          </a>
+        </div>
+        <div class="streams-block">
+          <div class="streams-block-desc">Хотите разместить свой стрим?</div>
+          <a href="#" class="streams-block-link">
+            Разместить стрим
+            <img class="main-block-header-nav-arrow" src="images/arrow-right.svg">
+          </a>
+        </div>
+        <div class="streams-block">
+          <div class="streams-block-desc">Хотите разместить свой стрим?</div>
+          <a href="#" class="streams-block-link">
+            Разместить стрим
+            <img class="main-block-header-nav-arrow" src="images/arrow-right.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="box">
+      <div class="footer-blocks">
+        <div class="footer-block">
+          <div class="footer-block-header">© 2023 SERVERNAME</div>
+          <div class="footer-block-desc">
+            This is only a test server for Lineage 2. All rights reserved by NCSOFT. SERVERNAME Lineage 2 Interlude free server.
+          </div>
+          <div class="footer-block-socials">
+            <a href="#">
+              <img src="images/discord.svg" width="25px">
+            </a>
+            <a href="#">
+              <img src="images/vk.svg" width="25px">
+            </a>
+            <a href="#">
+              <img src="images/telegram.svg" width="25px">
+            </a>
+          </div>
+        </div>
+        <div class="footer-block">
+          <div class="footer-block-header">Полезное</div>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Описание серверов</a>
+            <a href="#" class="footer-link">Скачать файлы для игры</a>
+            <a href="#" class="footer-link">Создать аккаунт</a>
+            <a href="#" class="footer-link">Войти в кабинет</a>
+          </div>
+        </div>
+        <div class="footer-block">
+          <div class="footer-block-header">Соглашение</div>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Пользовательское соглашение</a>
+            <a href="#" class="footer-link">Политика конфиденциальности</a>
+            <a href="#" class="footer-link">Политика доставки, возврата и обмена</a>
+            <a href="#" class="footer-link">Конаткты</a>
           </div>
         </div>
       </div>
